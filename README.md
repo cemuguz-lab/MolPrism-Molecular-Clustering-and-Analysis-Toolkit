@@ -27,7 +27,7 @@ Follow these steps to set up and run MolPrism. A `conda` environment is recommen
 First, clone the project from GitHub to your local machine:
 
 ```bash
-git clone https://github.com/cemuguz-lab/MolPrism.git
+git clone https://github.com/cemuguz-lab/MolPrism-Molecular-Clustering-and-Analysis-Toolkit.git
 cd MolPrism
 ```
 
