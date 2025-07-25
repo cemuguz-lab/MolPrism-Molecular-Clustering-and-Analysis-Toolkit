@@ -28,7 +28,7 @@ First, clone the project from GitHub to your local machine:
 
 ```bash
 git clone https://github.com/cemuguz-lab/MolPrism-Molecular-Clustering-and-Analysis-Toolkit.git
-cd MolPrism
+cd MMolPrism-Molecular-Clustering-and-Analysis-Toolkit
 ```
 
 ### 2. Create and Activate the Conda Environment
