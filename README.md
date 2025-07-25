@@ -1,4 +1,4 @@
-![MolPrism Logo](md_images/molprism_logo/molprism_logo.png){: width=350px} 
+<img src="md_images/molprism_logo/molprism_logo.png" alt="MolPrism Logo" width="350">
 # Molecular Clustering and Analysis Toolkit
 
 [![Python Version](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
