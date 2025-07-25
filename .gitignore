@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.env/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Conda environments
+.conda/
+envs/
+molprism_env/ # Specific to our project's conda env
+
+# IDEs
+.idea/ # PyCharm
+.vscode/ # VS Code
+
+# Operating System
+.DS_Store # macOS
+
+# Data
+data/Enamine_Specs_BMS_smiles_ids_affinity_descriptors_morgan_fingerprint_merged_cleaned_data.csv
+!data/test_sample_data.csv # Keep the small test sample data
+!data/config.template.yaml # Keep the config template
+
+# Output
+output/
+
+# Tests
+tests/
+# Setuptools
+molprism.egg-info/

@@ -1,0 +1,62 @@
+
+# MolPrism Configuration File Template
+# ------------------------------------
+# To use, rename this file to 'config.yaml' and update the parameters below.
+# You can run an analysis using this file with the command:
+# python molprism/cli.py --config config.yaml
+
+# --- Input & Output Settings ---
+# The absolute or relative path to your input data file.
+input_file: "data/first_run_50000.csv"
+
+# Directory where all output files (CSVs, plots) will be saved.
+# You can manually include the algorithm name here if desired,
+# e.g., output_dir: "output/run_from_config_kmeans",
+# e.g., output_dir: "output/run_from_config_dbscan",
+# e.g., output_dir: "output/run_from_config_agglomerative"
+output_dir: "output/run_from_config"
+
+# List of features (columns) from the input file to be used for clustering.
+features:
+  - "AromaticRings"
+  - "MinPartialCharge"
+  - "BalabanJ"
+  - "NumRings"
+  - "nHBDon"
+  - "nHBAcc"
+  - "nRot"
+
+# --- Algorithm Settings ---
+# The clustering algorithm to use. Options: [kmeans, dbscan, agglomerative]
+algorithm: "kmeans"
+
+# Number of representative molecules to select from each cluster.
+n_representatives: 15
+
+# --- Algorithm-Specific Parameters ---
+# These parameters are only used by the specified algorithm.
+
+kmeans_params:
+  # Number of clusters. If find_best_k is true, this value is ignored.
+  n_clusters: 8
+  # Set to true to let the algorithm find the optimal number of clusters automatically.
+  find_best_k: false
+  # The range to search for the best k.
+  min_k: 2
+  max_k: 10
+
+dbscan_params:
+  # The maximum distance between two samples for one to be considered as in the neighborhood of the other.
+  eps: 0.5
+  # The number of samples in a neighborhood for a point to be considered as a core point.
+  min_samples: 5
+
+agglomerative_params:
+  # The number of clusters to find.
+  n_clusters: 8
+  # The linkage criterion to use. Options: [ward, complete, average, single]
+  linkage: "ward"
+
+# --- Performance Settings ---
+# Number of CPU cores to use for parallelized tasks (-1 means use all available cores).
+n_jobs: -1
